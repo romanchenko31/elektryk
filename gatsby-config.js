@@ -4,9 +4,17 @@
 
 module.exports = {
   siteMetadata: {
-    title: `elektryk`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "Електромонтажні роботи в Дніпрі",
   },
-
-  plugins: [],
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog`,
+      },
+    },
+  ],
 };
